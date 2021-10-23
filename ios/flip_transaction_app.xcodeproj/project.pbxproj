@@ -14,6 +14,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		41B83A6E5B6B7138EC1A2805 /* libPods-flip_transaction_app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B7B77DD1F6B971E7AE44BE /* libPods-flip_transaction_app.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		CA8D09552722F3A50030FDA2 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA8D09532722F3A50030FDA2 /* Lato-Bold.ttf */; };
+		CA8D09562722F3A50030FDA2 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA8D09542722F3A50030FDA2 /* Lato-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		730C12F697366ECF27624D54 /* libPods-flip_transaction_app-flip_transaction_appTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-flip_transaction_app-flip_transaction_appTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = flip_transaction_app/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACAE125F92A6613FA9CF4CCD /* Pods-flip_transaction_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flip_transaction_app.debug.xcconfig"; path = "Target Support Files/Pods-flip_transaction_app/Pods-flip_transaction_app.debug.xcconfig"; sourceTree = "<group>"; };
+		CA8D09532722F3A50030FDA2 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bold.ttf"; path = "../../../Lato/Lato-Bold.ttf"; sourceTree = "<group>"; };
+		CA8D09542722F3A50030FDA2 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Regular.ttf"; path = "../../../Lato/Lato-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -114,7 +118,6 @@
 				71B373C0BC3928BF72CD570F /* Pods-flip_transaction_app-flip_transaction_appTests.debug.xcconfig */,
 				223811C25CBFBDFCDA815CE0 /* Pods-flip_transaction_app-flip_transaction_appTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,6 +131,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				CA8D09522722F34C0030FDA2 /* fonts */,
 				13B07FAE1A68108700A75B9A /* flip_transaction_app */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* flip_transaction_appTests */,
@@ -147,6 +151,15 @@
 				00E356EE1AD99517003FC87E /* flip_transaction_appTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CA8D09522722F34C0030FDA2 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CA8D09532722F3A50030FDA2 /* Lato-Bold.ttf */,
+				CA8D09542722F3A50030FDA2 /* Lato-Regular.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,7 +257,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				CA8D09552722F3A50030FDA2 /* Lato-Bold.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				CA8D09562722F3A50030FDA2 /* Lato-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,7 +576,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 i386";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -627,7 +642,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 i386";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
