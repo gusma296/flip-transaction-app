@@ -26,7 +26,10 @@ const ModalPicker = props => {
         borderRadius={8}
         backgroundColor={Colors.white}>
         {data.map((item, index) => (
-          <Touchable onPress={() => props.onPicked(item)} key={index}>
+          <Touchable
+            color={Colors.buttonColor}
+            onPress={() => props.onPicked(item)}
+            key={index}>
             <Content padding={12} row centerTop>
               <Icon
                 name={
