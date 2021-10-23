@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {Content, Text} from '../components';
-import {cardStyles} from '../styles/components.style';
-import Badge from './Badge';
-import Touchable from './Touchable';
-import {Colors, dateFormatter} from '../common';
+import {cardStyles} from '../../styles/components.style';
+import {Badge, Touchable, Content, Text} from '../../components';
+import {Colors, dateFormatter} from '../../common';
 Icon.loadFont();
 
 const Card = props => {

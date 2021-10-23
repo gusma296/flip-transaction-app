@@ -1,4 +1,4 @@
-import Card from './Card';
+import Card from '../screens/components/Card';
 import Content from './Content';
 import Container from './Container';
 import Header from './Header';

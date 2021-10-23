@@ -4,9 +4,9 @@ import {ActivityIndicator, FlatList, RefreshControl} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {alpabhetSort, Colors, currencyFormatter, dateSort} from '../common';
 import {Container, Content, Header, ModalPicker, Text} from '../components';
-import Card from '../components/Card';
+import Card from './components/Card';
 import {transactionStyles} from '../styles/transaction.style';
-import SearchFilter from './SearchFilter';
+import SearchFilter from './components/SearchFilter';
 Icon.loadFont();
 
 const TransactionList = () => {

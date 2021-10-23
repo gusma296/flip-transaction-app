@@ -10,4 +10,15 @@ export const transactionStyles = StyleSheet.create({
     paddingBottom: 32,
   },
   marginInput: {marginLeft: 8, color: Colors.black, padding: 0},
+  filter: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    backgroundColor: Colors.white,
+    marginHorizontal: 12,
+    marginTop: 16,
+    borderRadius: 8,
+    paddingVertical: 16,
+    marginBottom: 12,
+    padding: 8,
+  },
 });
