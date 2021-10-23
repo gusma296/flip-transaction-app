@@ -25,6 +25,7 @@ export const cardStyles = StyleSheet.create({
   pending: {
     borderLeftColor: Colors.primary,
   },
+  flex: {flex: 1},
 });
 
 export const containerStyle = StyleSheet.create({

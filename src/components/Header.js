@@ -1,6 +1,6 @@
 import React from 'react';
 import Text from './Text';
-import {Colors, width} from '../common';
+import {Colors} from '../common';
 import Content from './Content';
 import PropTypes from 'prop-types';
 import IconButton from './IconButton';
@@ -8,7 +8,7 @@ import IconButton from './IconButton';
 const Header = props => {
   return (
     <Content height={53} rowBetween backgroundColor={Colors.primary} row>
-      <Content width={width / 3}>
+      <Content width={40}>
         {props.onBackPress && (
           <IconButton
             onPress={props.onBackPress}
@@ -18,10 +18,12 @@ const Header = props => {
           />
         )}
       </Content>
-      <Text size={20} color={Colors.white} bold>
-        {props.title}
-      </Text>
-      <Content width={width / 3} />
+      <Content>
+        <Text size={20} color={Colors.white} bold>
+          {props.title}
+        </Text>
+      </Content>
+      <Content width={40} />
     </Content>
   );
 };

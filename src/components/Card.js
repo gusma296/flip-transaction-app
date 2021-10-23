@@ -16,8 +16,8 @@ const Card = props => {
       style={[cardStyles.container, styleBorder]}
       color={Colors.buttonColor}
       onPress={props.onPress}>
-      <Content flex={1} row rowBetween>
-        <Content>
+      <Content row rowBetween>
+        <Content flex={1.5}>
           <Content marginBottom={4} centerTop row>
             <Text marginRight={4} size={18} bold>
               {props.senderBank.toUpperCase()}
@@ -27,14 +27,20 @@ const Card = props => {
               {props.beneficiaryBank.toUpperCase()}
             </Text>
           </Content>
-          <Text>{props.beneficiaryName.toUpperCase()}</Text>
+          <Text style={cardStyles.flex}>
+            {props.beneficiaryName.toUpperCase()}
+          </Text>
           <Content marginTop={4} row centerTop>
             <Text marginRight={4}>{props.amount}</Text>
             <Icon name="circle" size={8} color={Colors.black} />
-            <Text marginLeft={4}>{dateFormatter(props.createdAt)}</Text>
+            <Text style={cardStyles.flex} marginLeft={4}>
+              {dateFormatter(props.createdAt)}
+            </Text>
           </Content>
         </Content>
-        <Badge status={props.status} />
+        <Content>
+          <Badge status={props.status} />
+        </Content>
       </Content>
     </Touchable>
   );

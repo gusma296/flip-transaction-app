@@ -8,7 +8,7 @@ import {IOS} from '../common';
 const IconButton = props => {
   return (
     <Pressable
-      android_ripple={{color: Colors.ripple_black, borderless: true}}
+      android_ripple={{color: Colors.buttonColor, borderless: true, radius: 20}}
       style={({pressed}) => [
         props.style,
         {
