@@ -96,27 +96,35 @@ const TransactionList = () => {
             picked={picked}
             onOpenPicker={onOpenPicker}
           />
-          <FlatList
-            contentContainerStyle={transactionStyles.listContent}
-            data={transactionData}
-            refreshControl={
-              <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
-            }
-            renderItem={({item}) => {
-              return (
-                <Card
-                  beneficiaryName={item.beneficiary_name}
-                  senderBank={item.sender_bank}
-                  beneficiaryBank={item.beneficiary_bank}
-                  amount={currencyFormatter(item.amount)}
-                  createdAt={item.created_at}
-                  status={item.status}
-                  onPress={() => onCardPress(item)}
-                />
-              );
-            }}
-            keyExtractor={res => res.id}
-          />
+          {transactionData.length <= 0 ? (
+            <Content marginTop={24} center>
+              <Text color={Colors.placeholder} size={16}>
+                Tidak ada hasil pencarian
+              </Text>
+            </Content>
+          ) : (
+            <FlatList
+              contentContainerStyle={transactionStyles.listContent}
+              data={transactionData}
+              refreshControl={
+                <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+              }
+              renderItem={({item}) => {
+                return (
+                  <Card
+                    beneficiaryName={item.beneficiary_name}
+                    senderBank={item.sender_bank}
+                    beneficiaryBank={item.beneficiary_bank}
+                    amount={currencyFormatter(item.amount)}
+                    createdAt={item.created_at}
+                    status={item.status}
+                    onPress={() => onCardPress(item)}
+                  />
+                );
+              }}
+              keyExtractor={res => res.id}
+            />
+          )}
         </Content>
       )}
       <ModalPicker
